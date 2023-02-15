@@ -7,7 +7,7 @@ import { updateSearchString } from '../../redux/store';
 
 const SearchForm = (props) => {
   const dispatch = useDispatch();
-  const [searchValue, setSearchValue] = useState(''); // why use state?
+  const [searchValue, setSearchValue] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(updateSearchString(searchValue));
@@ -17,7 +17,7 @@ const SearchForm = (props) => {
       <TextInput
         placeholder="Search..."
         value={searchValue}
-        onChange={(e) => setSearchValue(e.target.value)} /* construction ?*/
+        onChange={(e) => setSearchValue(e.target.value)}
       />
       <Button>
         <span className="fa fa-search" />
