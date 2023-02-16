@@ -27,12 +27,24 @@ const initialState = {
   ],
 
   cards: [
-    { id: '1', columnId: '1', title: 'This is Going to Hurt' },
-    { id: '2', columnId: '1', title: 'Interpreter of Maladies' },
-    { id: '3', columnId: '2', title: 'Harry Potter' },
-    { id: '4', columnId: '2', title: 'Star Wars' },
-    { id: '5', columnId: '3', title: 'The Witcher' },
-    { id: '6', columnId: '3', title: 'Skyrim' },
+    {
+      id: '1',
+      columnId: '1',
+      title: 'Pomnik Cesarzowej Achai',
+      isFavourite: true,
+    },
+    { id: '2', columnId: '1', title: 'Szogun', isFavourite: false },
+    { id: '3', columnId: '2', title: 'JavaScript', isFavourite: true },
+    { id: '4', columnId: '2', title: 'Python', isFavourite: false },
+    { id: '5', columnId: '3', title: 'Skrzynia skarbów', isFavourite: false },
+    {
+      id: '6',
+      columnId: '3',
+      title: 'Pudełko na kosmetyki do łazienki',
+      isFavourite: false,
+    },
+    { id: '7', columnId: '4', title: 'Gregorian', isFavourite: false },
+    { id: '8', columnId: '4', title: 'Nightwish', isFavourite: false },
   ],
 
   lists: [

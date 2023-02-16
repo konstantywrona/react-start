@@ -1,15 +1,38 @@
+import styles from './Favourite.module.scss';
 import Container from '../Container/Container';
 import PageTitle from '../PageTitle/PageTitle';
-import styles from '../Hero/Hero.module.scss';
+import { getFavouriteCard } from '../../redux/store';
+import { useSelector } from 'react-redux';
+import Card from '../Card/Card';
 
 const Favourite = () => {
+  const favouriteCards = useSelector(getFavouriteCard);
+  if (favouriteCards.length === 0) {
+    return (
+      <>
+        <Container>
+          <PageTitle>No cards...</PageTitle>
+        </Container>
+      </>
+    );
+  }
   return (
-    <div className={styles.hero}>
+    <>
       <Container>
         <PageTitle>Favourite</PageTitle>
-        <p>Lorem ipsum</p>
+        <div className={styles.column}>
+          <ul className={styles.cards}>
+            {favouriteCards.map((favouriteCard) => (
+              <Card
+                key={favouriteCard.id}
+                title={favouriteCard.title}
+                isFavourite={favouriteCard.isFavourite}
+              />
+            ))}
+          </ul>
+        </div>
       </Container>
-    </div>
+    </>
   );
 };
 
