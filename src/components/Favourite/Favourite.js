@@ -1,7 +1,7 @@
 import styles from './Favourite.module.scss';
 import Container from '../Container/Container';
 import PageTitle from '../PageTitle/PageTitle';
-import { getFavouriteCard } from '../../redux/store';
+import { getFavouriteCard } from '../../redux/cardsRedux';
 import { useSelector } from 'react-redux';
 import Card from '../Card/Card';
 
@@ -25,6 +25,7 @@ const Favourite = () => {
             {favouriteCards.map((favouriteCard) => (
               <Card
                 key={favouriteCard.id}
+                cardId={favouriteCard.id}
                 title={favouriteCard.title}
                 isFavourite={favouriteCard.isFavourite}
               />
