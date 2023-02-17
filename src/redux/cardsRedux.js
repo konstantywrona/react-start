@@ -11,7 +11,7 @@ export const getFavouriteCard = (state) =>
   state.cards.filter((card) => card.isFavourite === true);
 
 // actions
-const createActionName = (actionName) => `app/lists/${actionName}`;
+const createActionName = (actionName) => `app/cards/${actionName}`;
 const ADD_CARD = createActionName('ADD_CARD');
 const TOGGLE_CARD_FAVOURITE = createActionName('TOGGLE_CARD_FAVOURITE');
 const REMOVE_CARD = createActionName('REMOVE_CARD');

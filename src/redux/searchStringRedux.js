@@ -2,7 +2,7 @@
 export const searchInputValue = (state) => state.searchString;
 
 // actions
-const createActionName = (actionName) => `app/lists/${actionName}`;
+const createActionName = (actionName) => `app/search/${actionName}`;
 const UPDATE_SEARCHSTRING = createActionName('UPDATE_SEARCHSTRING');
 
 // action creators

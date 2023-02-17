@@ -6,7 +6,7 @@ export const getColumnsByList = ({ columns }, listId) =>
   columns.filter((column) => column.listId === listId);
 
 // actions
-const createActionName = (actionName) => `app/lists/${actionName}`;
+const createActionName = (actionName) => `app/columns/${actionName}`;
 const ADD_COLUMN = createActionName('ADD_COLUMN');
 
 // action creators
